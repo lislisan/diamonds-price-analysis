@@ -20,14 +20,14 @@ def plot_carat_vs_price(df):
 
 def plot_cut_price(df):
     fig, ax = plt.subplots(figsize=(8, 5))
-    sns.boxplot(data=df, x="cut", y="price", palette="Set2", ax=ax)
+    sns.boxplot(data=df, x="cut", y="price", palette="Set2", hue="cut", legend=False, ax=ax)
     ax.set_title("Цена по огранке (cut)")
     return fig
 
 
 def plot_color_price(df):
     fig, ax = plt.subplots(figsize=(8, 5))
-    sns.boxplot(data=df, x="color", y="price", palette="Set2", ax=ax)
+    sns.boxplot(data=df, x="color", y="price", palette="Set2", hue="cut", legend=False, ax=ax)
     ax.set_title("Цена по цвету (color)")
     return fig
 

@@ -4,4 +4,5 @@ scikit-learn==1.5.2
 matplotlib==3.9.2
 seaborn==0.13.2
 streamlit==1.41.1
+pyarrow<26
 opendatasets==0.1.22
