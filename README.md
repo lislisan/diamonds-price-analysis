@@ -1,15 +1,15 @@
-# 💎 Анализ цен на бриллианты
+# 💎 Анализ цен на бриллианты ✨
 
-Проект по анализу датасета [Diamonds](https://www.kaggle.com/datasets/shivam2503/diamonds) (54 000 бриллиантов):
+Проект по анализу датасета [Diamonds](https://www.kaggle.com/datasets/shivam2503/diamonds) (~ 54 000 бриллиантов):
 EDA, сравнение стратегий кодирования категориальных признаков и интерактивный дашборд на Streamlit.
 
-## Что внутри
+## Что внутри 
 
 - **4 стратегии** работы с категориальными (`cut`, `color`, `clarity`):
   1. Удаление
   2. OrdinalEncoder
   3. OneHotEncoding
-  4. OHE + полином 2-й степени для `carat`, `x`, `y`, `z`
+  4. OHE + полином 2-й степени для `carat`, `x`, `y`, `z` (усиливаю признаки на основе EDA)
 - **RandomForest** на OHE — как бенчмарк нелинейной модели
 - **Streamlit-дашборд** с EDA, сравнением метрик и анализом ошибок
 
@@ -36,9 +36,10 @@ python -m src.train
 streamlit run app.py
 ```
 
-Открой http://localhost:8501
+После откройте http://localhost:8501
 
-Запуск в Docker
+## Можно запустить через Docker 🐳
+
 ```bash
 docker build -t diamonds-app .
 docker run -p 8501:8501 diamonds-app
