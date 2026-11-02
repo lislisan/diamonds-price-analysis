@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+models/*.pkl
+models/metrics.json
+data/*.csv
+data/diamonds/
+.ipynb_checkpoints/
+.DS_Store
